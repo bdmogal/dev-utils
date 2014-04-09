@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/mogalb/mogalb_perforce/mogalb_hadoop/hadoop/trunk/pig/branch-0.10/build'
+let g:netrw_dirhist_2='/Users/mogalb/Documents/work/USS/secure-uss'
+let g:netrw_dirhist_3='/Users/mogalb/mogalb_perforce/mogalb_hadoop/hadoop/trunk/test/sample_security'
+let g:netrw_dirhist_4='/Users/mogalb/mogalb_perforce/mogalb_hadoop/hadoop/trunk/test/DataLoader_automation/conf'
+let g:netrw_dirhist_5='/Users/mogalb/work/git/uss/uss/src/main/resources/META-INF/services'
+let g:netrw_dirhist_6='/Users/mogalb/Documents/work/USS/sample-uss-configs'
+let g:netrw_dirhist_7='/Users/mogalb/work/git/apache'
+let g:netrw_dirhist_8='/Users/mogalb/Documents/software/gradle-1.11/samples/multiProjectBuildSrc'

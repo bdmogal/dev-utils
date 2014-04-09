@@ -1,0 +1,18 @@
+
+§ =============================================================
+§ ========== USER MACROS ======================================
+§ =============================================================
+§
+|AUTHOR|       = Bhooshan Mogal 
+|AUTHORREF|    = bdm
+|EMAIL|        = Bhooshan.Mogal@emc.com
+|ORGANIZATION| = Greenplum
+§
+§ =============================================================
+§ ========== FILE INCLUDES ====================================
+§ =============================================================
+§
+|includefile| = bash.comments.template
+|includefile| = bash.statements.template
+|includefile| = bash.paramsub.template
+§
