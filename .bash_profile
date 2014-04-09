@@ -111,3 +111,14 @@ export PATH=$PATH:$GRADLE_HOME/bin
 # groovy
 export GROOVY_HOME=/Users/mogalb/Documents/software/groovy-2.2.2/
 export PATH=$PATH:$GROOVY_HOME/bin
+
+
+function hgrep
+{
+    history | grep -i "$@"
+}
+
+function gkill
+{
+   kill -9 `ps -ef | grep $1 | grep -v grep | awk '{print $2}'`
+}
