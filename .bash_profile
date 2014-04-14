@@ -24,6 +24,9 @@ PS1='\[\e[0;37m\](\[\e[m\]\[\e[0;32m\]\u@\h\[\e[m\]\[\e[0;37m\])\[\e[m\] : \[\e[
 #export PS1='[m][$$:$PPID - j:![m]][;36m] Td [m][[m]u@H[m]:[;37m]${SSH_TTY}   [;32m]+${SHLVL}[m]] [m]w[;37m] n$ '
 #export PS1='[\u@\h \[\e[7;33m\]\w\[\e[0m\]]$ '
 
+#ls colors
+export LSCOLORS="gxfxcxdxbxegedabagacad"
+
 #aliases
 alias ll='ls -lhaGrt'
 alias lart='ls -lart'
