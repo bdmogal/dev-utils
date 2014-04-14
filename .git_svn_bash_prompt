@@ -61,9 +61,7 @@ function set_git_branch {
   # Set arrow icon based on status against remote.
   remote_pattern="Your branch is (.*) of"
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
-    echo "in if 1 ${BASH_REMATCH[1]}"
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      echo "in ahead if" 
       remote="↑"
     else
       remote="↓"
@@ -71,7 +69,6 @@ function set_git_branch {
   else
     remote=""
   fi
-  echo "remote=$remote"
   diverge_pattern="Your branch and (.*) have diverged"
   if [[ ${git_status} =~ ${diverge_pattern} ]]; then
     remote="↕"
