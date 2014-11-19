@@ -28,6 +28,7 @@ PS1='\[\e[0;37m\](\[\e[m\]\[\e[0;32m\]\u@\h\[\e[m\]\[\e[0;37m\])\[\e[m\] : \[\e[
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 
 #aliases
+#alias ll='ls -l'
 alias ll='ls -lhaGrt'
 alias lart='ls -lart'
 alias la='ls -la'
@@ -99,11 +100,12 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
-source ~/.p4settings
-
 PS1_NO_GIT=$PS1
 . ~/.git_svn_bash_prompt
 
+
+#hadoop
+export PATH=$PATH:/Users/mogalb/Documents/work/USS/hadoop-2.0.5-alpha-gphd-2.1.0.0-SNAPSHOT/bin/
 
 export PATH=/opt/subversion/bin:$PATH
 
@@ -125,3 +127,18 @@ function gkill
 {
    kill -9 `ps -ef | grep $1 | grep -v grep | awk '{print $2}'`
 }
+
+##
+# Your previous /Users/bmogal/.bash_profile file was backed up as /Users/bmogal/.bash_profile.macports-saved_2014-04-16_at_15:46:35
+##
+
+# MacPorts Installer addition on 2014-04-16_at_15:46:35: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# Docker
+export DOCKER_HOST=tcp://127.0.0.1:4243
+
+# Postgres
+export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3
+export PATH=$PATH:$POSTGRES_HOME/bin

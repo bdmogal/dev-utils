@@ -38,6 +38,7 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+colorscheme mustang
 if &t_Co >= 256 || has("gui_running")
 	colorscheme mustang
 	" colorscheme wombat
@@ -56,7 +57,9 @@ nnoremap ; :
 au BufRead,BufNewFile *.java set filetype=java
 au BufRead,BufNewFile *.php set filetype=php
 au BufRead,BufNewFile *.perl set filetype=perl
+au BufRead,BufNewFile *.pp set filetype=perl
 au BufRead,BufNewFile *.py set filetype=py
+au BufRead,BufNewFile *.gradle set filetype=py
 au BufRead,BufNewFile *.cpp set filetype=c
 au BufRead,BufNewFile *.cc set filetype=c
 au BufRead,BufNewFile *.c set filetype=c
