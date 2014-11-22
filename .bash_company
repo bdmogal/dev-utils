@@ -1,0 +1,22 @@
+# cdap
+GIT_HOME=$HOME/work/git
+CDAP_HOME=$GIT_HOME/cdap
+export REACTOR_HOME=$CDAP_HOME
+export BEAMER_USER=bhooshanmogal
+
+# hadoop
+# export HADOOP_HOME=<add later and enable>
+# export PATH=$PATH:
+
+# gradle
+# export GRADLE_HOME=<add later and enable>
+# export PATH=$PATH:$GRADLE_HOME/bin
+
+# groovy
+# export GROOVY_HOME=<add later and enable>
+# export PATH=$PATH:$GROOVY_HOME/bin
+
+# Postgres
+# export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3
+# export PATH=$PATH:$POSTGRES_HOME/bin
+

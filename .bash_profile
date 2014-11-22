@@ -15,130 +15,42 @@ fi
 #environment
 export EDITOR=vim
 export MAVEN_OPTS=-Xmx1024m
-
-PS1='\[\e[0;37m\](\[\e[m\]\[\e[0;32m\]\u@\h\[\e[m\]\[\e[0;37m\])\[\e[m\] : \[\e[0;37m\](\[\e[m\]\[\e[0;36m\]\d \t\[\e[m\]\[\e[0;37m\])\[\e[m\] : \[\e[0;37m\](\[\e[m\]\[\e[0;36m\]shell:\s jobs:\j term:\l\[\e[m\]\[\e[0;37m\])\[\e[m\] : \[\e[0;37m\](\[\e[m\]\[\e[0;32m\]\w\[\e[m\]\[\e[0;37m\])\[\e[m\] \n\[\e[0;37m\](\[\e[m\]\[\e[0;36m\]\!.\#\[\e[m\]\[\e[0;37m\])\[\e[m\] \[\e[0;32m\]\$\[\e[m\] \[\e[0;32m\]'
-#PS1='\[\e[m\]\[\e[0;32m\]\u@\h\[\e[m\]\[\e[m\] : \[\e[m\]\[\e[0;36m\]\d \t\[\e[m\]\[\e[m\] : \[\e[m\]\[\e[0;36m\]shell:\s jobs:\j term:\l\[\e[m\]\[\e[m\] : \[\e[m\]\[\e[0;32m\]\w\[\e[m\]\[\e[m\] \n\[\e[m\]\[\e[0;36m\]\!.\#\[\e[m\]\[\e[m\] \[\e[0;32m\]\$\[\e[m\] \[\e[0;32m\]'
-#PS1='\[\e[m\]\[\e[7;93m\]\u@\h \d \t \w \n\!.\# \$\[\e[m\] \[\e[0;32m\]'
-#export AA_P="export PVE="\033[m\033[38;5;2m"$(( `sed -n "s/MemFree:[\t]\+\([0-9]\+\) kB/\1/p" /proc/meminfo` / 1024 ))"\033[38;5;22m/"$((`sed -n"s/MemTotal:[\t ]\+\([0-9]\+\) kB/\1/p" /proc/meminfo`/ 1024))MB"\t\033[m\033[38;5;55m$(< /proc/loadavg)\033[m";echo -en """
-#export PVE="\033[m\033[38;5;2m813\033[38;5;22m/1024MB\t\033[m\033[38;5;55m0.25 0.22 0.18 1/66 26820\033[m" && eval $AA_P
-#export PS1='[m][$$:$PPID - j:![m]][;36m] Td [m][[m]u@H[m]:[;37m]${SSH_TTY}   [;32m]+${SHLVL}[m]] [m]w[;37m] n$ '
-#export PS1='[\u@\h \[\e[7;33m\]\w\[\e[0m\]]$ '
-
+export JAVA_HOME=/Library/Java/Home
 #ls colors
 export LSCOLORS="gxfxcxdxbxegedabagacad"
-
-#aliases
-#alias ll='ls -l'
-alias ll='ls -lhaGrt'
-alias lart='ls -lart'
-alias la='ls -la'
-alias mc='mvn clean'
-alias minst='mvn clean install'
-alias mpkg='mvn clean package'
-alias mtest='mvn clean compile test'
-alias rmr='rm -rf'
-alias sup='svn up'
-alias sco='svn co'
-alias sci='svn ci'
-alias sta='svn status'
-alias sdif='svn diff'
-alias srm='svn rm'
-alias smv='svn mv'
-alias reload='source ~/.bash_profile'
-alias g='grep -ri --color=auto'
-alias gj='grep -ri --include=*.java --exclude=*/test/* --color=auto'
-alias grep='grep --color=auto'
-alias ip="curl -s http://www.showmyip.com/simple/ | awk '{print $1}'"
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
-#lock computer
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-
-
-# hadoop
-alias hls='hadoop fs -ls'
-alias hcat='hadoop fs -cat'
-alias hdus='hadoop fs -dus'
-alias hrmr='hadoop fs -rmr'
-alias hrmrs='hadoop fs -rmr -skipTrash'
-alias hput='hadoop fs -put'
-alias hget='hadoop fs -get'
-alias hkill='hadoop job -kill'
-alias hjar='hadoop jar'
-
-# mfu grep commands
-alias h="history|grep "
-alias f="find . |grep "
-alias p="ps -ef |grep "
-
-# file operations
-alias l="less"
-alias m="more"
-alias c="cat"
-alias t="touch"
-alias v="vim"
-alias e="emacs"
-
-
-
-VLESS=$(find /usr/share/vim -name 'less.sh')
-if [ ! -z $VLESS ]; then
-  alias less=$VLESS
-fi
-
-export JAVA_HOME=/Library/Java/Home
-
-##
-# Your previous /Users/mogalb/.bash_profile file was backed up as /Users/mogalb/.bash_profile.macports-saved_2012-09-29_at_22:45:44
-##
-
 # MacPorts Installer addition on 2012-09-29_at_22:45:44: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-PS1_NO_GIT=$PS1
-. ~/.git_svn_bash_prompt
-
-
-#hadoop
-export PATH=$PATH:/Users/mogalb/Documents/work/USS/hadoop-2.0.5-alpha-gphd-2.1.0.0-SNAPSHOT/bin/
-
-export PATH=/opt/subversion/bin:$PATH
-
-# gradle
-export GRADLE_HOME=/Users/mogalb/Documents/software/gradle-1.11/
-export PATH=$PATH:$GRADLE_HOME/bin
-
-# groovy
-export GROOVY_HOME=/Users/mogalb/Documents/software/groovy-2.2.2/
-export PATH=$PATH:$GROOVY_HOME/bin
-
-
-function hgrep
-{
-    history | grep -i "$@"
-}
-
-function gkill
-{
-   kill -9 `ps -ef | grep $1 | grep -v grep | awk '{print $2}'`
-}
-
-##
-# Your previous /Users/bmogal/.bash_profile file was backed up as /Users/bmogal/.bash_profile.macports-saved_2014-04-16_at_15:46:35
-##
-
-# MacPorts Installer addition on 2014-04-16_at_15:46:35: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
 # Docker
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
-# Postgres
-export POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3
-export PATH=$PATH:$POSTGRES_HOME/bin
+
+
+# PS1 and prompt
+if [ -f "$HOME/.bash_ps1" ]; then
+    . "$HOME/.bash_ps1"
+fi
+PS1_NO_GIT=$PS1
+if [ -f "$HOME/.git_svn_bash_prompt" ]; then
+    . $HOME/.git_svn_bash_prompt
+fi
+if [ -f "$HOME/.git_completion" ]; then
+    . $HOME/.git_completion
+fi
+
+
+# aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    . $HOME/.bash_aliases
+fi
+
+
+# functions
+if [ -f "$HOME/.bash_functions" ]; then
+    . $HOME/.bash_functions
+fi
+
+
+# company specific stuff
+if [ -f "$HOME/.bash_company" ]; then
+    . "$HOME/.bash_company"
+fi
