@@ -24,6 +24,7 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias g='grep -ri --color=auto'
 alias gj='grep -ri --include=*.java --exclude=*/test/* --color=auto'
+alias gjt='grep -ri --include=*.java --color=auto'
 
 # maven
 alias mc='mvn clean'
