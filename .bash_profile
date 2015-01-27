@@ -22,6 +22,8 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Docker
 export DOCKER_HOST=tcp://127.0.0.1:4243
+# Add time to history
+export HISTTIMEFORMAT="%d/%m/%y %T "
 
 
 
