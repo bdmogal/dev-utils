@@ -31,7 +31,7 @@ function java_files_exist
 # to run specific tests, include the test file names (or specific test names in TestClass#testMethod format) as arguments
 function mvntest
 {
-    MAVEN_COMMAND="mvn clean package"
+    MAVEN_COMMAND="mvn clean test"
     if [[ "$#" -ne 0 ]]; then
         TEST_LIST=$@
         echo "Running the following Maven tests: $TEST_LIST"
