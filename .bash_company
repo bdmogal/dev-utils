@@ -1,9 +1,3 @@
-# cdap
-GIT_HOME=$HOME/work/git
-CDAP_HOME=$GIT_HOME/cdap
-export REACTOR_HOME=$CDAP_HOME
-export BEAMER_USER=bhooshanmogal
-
 # hadoop
 # export HADOOP_HOME=<add later and enable>
 # export PATH=$PATH:
