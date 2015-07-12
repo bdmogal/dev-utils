@@ -29,7 +29,7 @@ alias gjt='grep -ri --include=*.java --color=auto'
 # maven
 alias mc='mvn clean'
 alias minst='mvn clean install'
-alias mpkg='mvn clean package'
+alias mpkg='mvn clean package -DskipTests'
 alias mtest='mvn clean compile test'
 
 # hadoop
