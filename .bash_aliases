@@ -21,16 +21,11 @@ alias lh='ls -lSh'
 alias l='ls -CF'
 
 # grep
-alias grep='grep --color=auto'
-alias g='grep -ri --color=auto'
-alias gj='grep -ri --include=*.java --exclude=*/test/* --color=auto'
-alias gjt='grep -ri --include=*.java --color=auto'
-
-# maven
-alias mc='mvn clean'
-alias minst='mvn clean install'
-alias mpkg='mvn clean package -DskipTests'
-alias mtest='mvn clean compile test'
+alias grep='grep --color=auto -n'
+alias g='grep -ri --color=auto -n'
+alias gj='grep -ri --include=*.java --exclude=*/test/* --color=auto -n'
+alias gjt='grep -ri --include=*.java --color=auto -n'
+alias gx='grep -ri --include=*.xml --color=auto -n'
 
 # hadoop
 alias hls='hadoop fs -ls'

@@ -42,3 +42,48 @@ function mvntest
     echo "Maven command = $MAVEN_COMMAND"
     $MAVEN_COMMAND
 }
+
+function mc
+{
+    if [[ $# -eq 0 ]]; then
+        MAVEN_COMMAND="mvn clean"
+    else
+        MAVEN_COMMAND="mvn clean -pl $1 -am -amd"
+    fi
+    echo "Maven command = $MAVEN_COMMAND"
+    $MAVEN_COMMAND
+}
+
+function minst
+{
+    if [[ $# -eq 0 ]]; then
+        MAVEN_COMMAND="mvn clean install -DskipTests"
+    else
+        MAVEN_COMMAND="mvn clean install -DskipTests -pl $1 -am -amd"
+    fi
+    echo "Maven command = $MAVEN_COMMAND"
+    $MAVEN_COMMAND
+}
+
+function mpkg
+{
+    if [[ $# -eq 0 ]]; then
+        MAVEN_COMMAND="mvn clean package -DskipTests"
+    else
+        MAVEN_COMMAND="mvn clean package -DskipTests -pl $1 -am -amd"
+    fi
+    echo "Maven command = $MAVEN_COMMAND"
+    $MAVEN_COMMAND
+}
+
+function mtest
+{
+    if [[ $# -eq 0 ]]; then
+        mvn clean compile test 
+    else
+        mvn clean compile test -pl $1 -am -amd
+    fi
+    echo "Maven command = $MAVEN_COMMAND"
+    $MAVEN_COMMAND
+}
+
