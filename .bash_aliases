@@ -84,3 +84,5 @@ if [ ! -z $VLESS ]; then
   alias less=$VLESS
 fi
 
+# ui
+alias cleaninstallui='rm -rf node_modules && rm -rf bower_components && npm cache clean && bower cache clean && npm install && bower install' 
